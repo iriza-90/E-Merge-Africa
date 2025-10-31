@@ -34,11 +34,34 @@ export default function About() {
           "'Manrope', ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial",
       }}
     >
-      <div className="max-w-[1260px] mx-auto px-6 md:px-8 py-20 md:py-28">
+      <div
+        className="mx-auto"
+        /* fluid container paddings; prevents crowding on small and big screens */
+        style={{
+          maxWidth: "min(1260px, 96vw)",
+          paddingLeft: "clamp(16px, 4vw, 32px)",
+          paddingRight: "clamp(16px, 4vw, 32px)",
+          paddingTop: "clamp(64px, 10vw, 112px)",
+          paddingBottom: "clamp(64px, 10vw, 112px)",
+        }}
+      >
         {/* pill */}
         <div className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#DDE3EA] bg-[#F8FAFC] px-4 py-2 text-[12.3px] font-semibold text-[#2B5AD5]">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="stroke-current">
+          <span
+            className="inline-flex items-center gap-2 rounded-full border border-[#DDE3EA] bg-[#F8FAFC]"
+            style={{
+              padding: "clamp(6px,1.5vw,8px) clamp(12px,2vw,16px)",
+              fontSize: "clamp(11px,2.6vw,12.3px)",
+              fontWeight: 600,
+              color: "#2B5AD5",
+            }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              className="stroke-current"
+              style={{ width: "clamp(14px,3.2vw,16px)", height: "clamp(14px,3.2vw,16px)" }}
+            >
               <circle cx="12" cy="12" r="9" strokeWidth="2" />
               <path d="M12 7v6l4 2" strokeWidth="2" />
             </svg>
@@ -47,30 +70,60 @@ export default function About() {
         </div>
 
         {/* heading + subtitle */}
-        <h2 className="mt-6 text-center text-[30.6px] md:text-[37.4px] font-extrabold text-[#0F172A] tracking-[-0.01em]">
+        <h2
+          className="mt-6 text-center font-extrabold text-[#0F172A]"
+          style={{
+            fontSize: "clamp(24px,6vw,37.4px)",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.15,
+          }}
+        >
           Your Trusted AI Security Partner in Africa
         </h2>
-        <p className="mt-4 text-center text-[15.3px] leading-[1.75] text-[#64748B] max-w-[980px] mx-auto">
+        <p
+          className="mt-4 text-center mx-auto text-[#64748B]"
+          style={{
+            fontSize: "clamp(14px,3.4vw,15.3px)",
+            lineHeight: 1.75,
+            maxWidth: "min(980px, 92vw)",
+          }}
+        >
           Delivering world-class technology across Africa, built on Zero Trust Architecture principles.
         </p>
 
         {/* two columns */}
-        <div className="mt-14 grid grid-cols-12 gap-x-14 gap-y-12 items-start">
+        <div
+          className="grid items-start"
+          style={{
+            marginTop: "clamp(32px,7vw,56px)",
+            gridTemplateColumns: "repeat(12, minmax(0, 1fr))",
+            columnGap: "clamp(16px,4.5vw,56px)",
+            rowGap: "clamp(20px,5vw,48px)",
+          }}
+        >
           {/* LEFT graphic card */}
           <div className="col-span-12 lg:col-span-6">
             <GraphicCard />
           </div>
 
-          {/* RIGHT copy + cards (top aligned to card) */}
-          <div className="col-span-12 lg:col-span-6 lg:pt-2">
-            <p className="text-[14.9px] leading-[1.9] text-[#334155]">
+          {/* RIGHT copy + cards */}
+          <div className="col-span-12 lg:col-span-6" style={{ paddingTop: "clamp(0px,1.5vw,8px)" }}>
+            <p
+              className="text-[#334155]"
+              style={{ fontSize: "clamp(14px,3.2vw,14.9px)", lineHeight: 1.9 }}
+            >
               E-Merge Africa Limited is a Kigali-based IT solutions provider and value-added reseller. We partner with global technology leaders to deliver secure, scalable, and future-ready solutions for African organizations.
             </p>
 
-            <div className="mt-6 space-y-6">
+            <div style={{ marginTop: "clamp(18px,4.2vw,24px)" }} className="space-y-4 sm:space-y-6">
               <InfoCard
                 icon={
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="stroke-current">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="stroke-current"
+                    style={{ width: "clamp(18px,4vw,20px)", height: "clamp(18px,4vw,20px)" }}
+                  >
                     <circle cx="12" cy="12" r="9" strokeWidth="2" />
                     <path d="M12 6v6l4 2" strokeWidth="2" />
                   </svg>
@@ -81,7 +134,12 @@ export default function About() {
 
               <InfoCard
                 icon={
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="stroke-current">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="stroke-current"
+                    style={{ width: "clamp(18px,4vw,20px)", height: "clamp(18px,4vw,20px)" }}
+                  >
                     <circle cx="12" cy="12" r="9" strokeWidth="2" />
                     <path d="M9 12l2 2 4-4" strokeWidth="2" />
                   </svg>
@@ -94,12 +152,18 @@ export default function About() {
         </div>
 
         {/* ===== Our Core Values ===== */}
-        <div className="mt-16 md:mt-20 rounded-2xl border border-[#E8EEF5] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.05)] p-8 md:p-12">
-          <h3 className="text-center text-[23.8px] md:text-[27.2px] font-extrabold text-[#0F172A]">
+        <div
+          className="rounded-2xl border border-[#E8EEF5] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.05)]"
+          style={{ marginTop: "clamp(40px,8vw,80px)", padding: "clamp(20px,5vw,48px)" }}
+        >
+          <h3
+            className="text-center font-extrabold text-[#0F172A]"
+            style={{ fontSize: "clamp(20px,5.4vw,27.2px)" }}
+          >
             Our Core Values
           </h3>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" style={{ marginTop: "clamp(20px,6vw,40px)" }}>
             <ValueCard
               icon={<ShieldIcon />}
               title="Integrity"
@@ -128,14 +192,24 @@ export default function About() {
 /* ---------- right-side small cards ---------- */
 function InfoCard({ icon, title, text }) {
   return (
-    <div className="rounded-xl border border-[#E6ECF2] bg-white shadow-[0_6px_24px_rgba(15,23,42,0.05)] p-5 md:p-6">
-      <div className="flex items-start gap-4">
-        <div className="grid place-items-center w-11 h-11 rounded-lg bg-[#EFF6FF] text-[#2563EB] border border-[#E4EEFF]">
+    <div className="rounded-xl border border-[#E6ECF2] bg-white shadow-[0_6px_24px_rgba(15,23,42,0.05)] p-4 sm:p-5 md:p-6">
+      <div className="flex items-start gap-3 sm:gap-4">
+        <div
+          className="grid place-items-center rounded-lg bg-[#EFF6FF] text-[#2563EB] border border-[#E4EEFF]"
+          style={{ width: "clamp(36px,9vw,44px)", height: "clamp(36px,9vw,44px)" }}
+        >
           {icon}
         </div>
         <div>
-          <h4 className="text-[14.45px] font-bold text-[#0F172A]">{title}</h4>
-          <p className="mt-1.5 text-[13.43px] leading-[1.75] text-[#475569]">{text}</p>
+          <h4 className="text-[#0F172A] font-bold" style={{ fontSize: "clamp(14px,3.2vw,14.45px)" }}>
+            {title}
+          </h4>
+          <p
+            className="mt-1.5 text-[#475569]"
+            style={{ fontSize: "clamp(13px,2.8vw,13.43px)", lineHeight: 1.72 }}
+          >
+            {text}
+          </p>
         </div>
       </div>
     </div>
@@ -151,27 +225,50 @@ function ValueCard({ icon, title, text, tone = "blue" }) {
       ? "bg-slate-50 text-slate-600"
       : "bg-blue-50 text-blue-600";
   return (
-    <div className="text-center px-5 py-6">
-      <div className={`mx-auto w-16 h-16 rounded-lg grid place-items-center ${toneClasses}`}>
+    <div className="text-center px-3 sm:px-5 py-5 sm:py-6">
+      <div
+        className={`mx-auto rounded-lg grid place-items-center ${toneClasses}`}
+        style={{ width: "clamp(52px,12vw,64px)", height: "clamp(52px,12vw,64px)" }}
+      >
         {icon}
       </div>
-      <h4 className="mt-4 text-[15.3px] font-bold text-[#0F172A]">{title}</h4>
-      <p className="mt-2 text-[13.18px] leading-[1.8] text-[#475569]">{text}</p>
+      <h4
+        className="mt-4 font-bold text-[#0F172A]"
+        style={{ fontSize: "clamp(14px,3.2vw,15.3px)" }}
+      >
+        {title}
+      </h4>
+      <p
+        className="mt-2 text-[#475569]"
+        style={{ fontSize: "clamp(13px,2.9vw,13.18px)", lineHeight: 1.8 }}
+      >
+        {text}
+      </p>
     </div>
   );
 }
 
-/* ---------- values icons ---------- */
+/* ---------- values icons (responsive sizing via width/height clamp) ---------- */
 function ShieldIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="stroke-current">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="stroke-current"
+      style={{ width: "clamp(22px,5.5vw,28px)", height: "clamp(22px,5.5vw,28px)" }}
+    >
       <path d="M12 2l7 3v6c0 5-3.5 9.5-7 11-3.5-1.5-7-6-7-11V5l7-3z" strokeWidth="2" />
     </svg>
   );
 }
 function UsersIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="stroke-current">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="stroke-current"
+      style={{ width: "clamp(22px,5.5vw,28px)", height: "clamp(22px,5.5vw,28px)" }}
+    >
       <path d="M16 11a4 4 0 10-8 0 4 4 0 008 0z" strokeWidth="2" />
       <path d="M3 20a7 7 0 0114 0" strokeWidth="2" />
     </svg>
@@ -179,18 +276,28 @@ function UsersIcon() {
 }
 function GlobeIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="stroke-current">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="stroke-current"
+      style={{ width: "clamp(22px,5.5vw,28px)", height: "clamp(22px,5.5vw,28px)" }}
+    >
       <circle cx="12" cy="12" r="9" strokeWidth="2" />
       <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" strokeWidth="2" />
     </svg>
   );
 }
 
-/* ---------- left graphic (wider, less “squeezed”) ---------- */
+/* ---------- left graphic (responsive tiles; removed negative margin to stop overflow) ---------- */
 function GraphicCard() {
-  const TILE = 106; // bigger tiles than before
   return (
-    <div className="relative rounded-2xl border border-[#E8EEF5] bg-white shadow-[0_14px_40px_rgba(15,23,42,0.06)] p-10 md:p-12 overflow-hidden min-h-[420px] -ml-6">
+    <div
+      className="relative rounded-2xl border border-[#E8EEF5] bg-white shadow-[0_14px_40px_rgba(15,23,42,0.06)] overflow-hidden"
+      style={{
+        padding: "clamp(20px,5vw,48px)",
+        minHeight: "clamp(320px,52vw,420px)",
+      }}
+    >
       {/* faint gradient & diagonal sheen */}
       <div
         className="pointer-events-none absolute inset-0 -z-10 rounded-2xl"
@@ -213,8 +320,10 @@ function GraphicCard() {
       {Array.from({ length: 14 }).map((_, i) => (
         <span
           key={i}
-          className="absolute w-[3px] h-[3px] rounded-full bg-emerald-400/80"
+          className="absolute rounded-full bg-emerald-400/80"
           style={{
+            width: "3px",
+            height: "3px",
             left: `${14 + Math.random() * 72}%`,
             top: `${14 + Math.random() * 72}%`,
             opacity: 0.35,
@@ -224,27 +333,42 @@ function GraphicCard() {
       ))}
 
       {/* 3-step flow */}
-      <div className="grid grid-cols-3 gap-10 items-end">
+      <div
+        className="grid items-end"
+        style={{
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gap: "clamp(14px,3.5vw,40px)",
+        }}
+      >
         {/* 1) Raw Data */}
         <div className="text-center">
           <div
             className="mx-auto rounded-xl bg-[#F6F8FB] border border-[#E7EDF5] grid place-items-center shadow-sm"
-            style={{ width: TILE, height: TILE }}
+            style={{
+              width: "clamp(82px,18vw,106px)",
+              height: "clamp(82px,18vw,106px)",
+            }}
           >
             <svg
-              width={TILE * 0.42}
-              height={TILE * 0.42}
               viewBox="0 0 24 24"
               fill="none"
               className="stroke-[#334155]/80"
+              style={{
+                width: "clamp(34px,7.5vw,44px)",
+                height: "clamp(34px,7.5vw,44px)",
+              }}
             >
               <ellipse cx="12" cy="6" rx="7" ry="3" strokeWidth="2" />
               <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" strokeWidth="2" />
               <path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" strokeWidth="2" />
             </svg>
           </div>
-          <div className="mt-3 font-semibold text-[#0F172A] text-[13.6px]">Raw Data</div>
-          <div className="text-[11.48px] text-[#64748B]">Network Traffic</div>
+          <div className="mt-3 font-semibold text-[#0F172A]" style={{ fontSize: "clamp(13px,3.1vw,13.6px)" }}>
+            Raw Data
+          </div>
+          <div className="text-[#64748B]" style={{ fontSize: "clamp(11px,2.7vw,11.48px)" }}>
+            Network Traffic
+          </div>
           <div className="mt-2 flex justify-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
             <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/70" />
@@ -257,26 +381,32 @@ function GraphicCard() {
           <div
             className="mx-auto rounded-xl grid place-items-center shadow-[0_10px_22px_rgba(37,99,235,0.25)] border border-white/40"
             style={{
-              width: TILE,
-              height: TILE,
+              width: "clamp(82px,18vw,106px)",
+              height: "clamp(82px,18vw,106px)",
               background: "linear-gradient(135deg, #10B981 0%, #2563EB 85%)",
               position: "relative",
             }}
           >
             <span className="absolute inset-[8px] rounded-[12px] border border-white/20" />
             <svg
-              width={TILE * 0.40}
-              height={TILE * 0.40}
               viewBox="0 0 24 24"
               fill="none"
               className="stroke-white"
+              style={{
+                width: "clamp(32px,7vw,42px)",
+                height: "clamp(32px,7vw,42px)",
+              }}
             >
               <path d="M8 8c0-2.2 1.8-4 4-4s4 1.8 4 4v8c0 2.2-1.8 4-4 4s-4-1.8-4-4V8z" strokeWidth="2" />
               <path d="M12 4v16M7 9h10M7 15h10" strokeWidth="2" />
             </svg>
           </div>
-          <div className="mt-3 font-semibold text-[#0F172A] text-[13.6px]">AI Engine</div>
-          <div className="text-[11.48px] text-[#64748B]">Darktrace</div>
+          <div className="mt-3 font-semibold text-[#0F172A]" style={{ fontSize: "clamp(13px,3.1vw,13.6px)" }}>
+            AI Engine
+          </div>
+          <div className="text-[#64748B]" style={{ fontSize: "clamp(11px,2.7vw,11.48px)" }}>
+            Darktrace
+          </div>
           <div className="mt-2 mx-auto flex justify-center gap-1.5 h-5">
             {[8, 12, 10, 14, 9].map((h, idx) => (
               <span
@@ -296,25 +426,39 @@ function GraphicCard() {
           <div
             className="mx-auto rounded-xl grid place-items-center shadow-[0_10px_22px_rgba(37,99,235,0.25)] border border-white/40"
             style={{
-              width: TILE,
-              height: TILE,
+              width: "clamp(82px,18vw,106px)",
+              height: "clamp(82px,18vw,106px)",
               background: "linear-gradient(135deg, #1D4ED8 0%, #2563EB 85%)",
             }}
           >
             <svg
-              width={TILE * 0.40}
-              height={TILE * 0.40}
               viewBox="0 0 24 24"
               fill="none"
               className="stroke-white"
+              style={{
+                width: "clamp(32px,7vw,42px)",
+                height: "clamp(32px,7vw,42px)",
+              }}
             >
               <path d="M12 2l7 3v6c0 5-3.5 9.5-7 11-3.5-1.5-7-6-7-11V5l7-3z" strokeWidth="2" />
             </svg>
           </div>
-          <div className="mt-3 font-semibold text-[#0F172A] text-[13.6px]">Protection</div>
-          <div className="text-[11.48px] text-[#64748B]">Threat Blocked</div>
-          <div className="mt-2 inline-flex items-center gap-1.5 text-[11.48px] font-medium text-[#2563EB]">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="stroke-current">
+          <div className="mt-3 font-semibold text-[#0F172A]" style={{ fontSize: "clamp(13px,3.1vw,13.6px)" }}>
+            Protection
+          </div>
+          <div className="text-[#64748B]" style={{ fontSize: "clamp(11px,2.7vw,11.48px)" }}>
+            Threat Blocked
+          </div>
+          <div
+            className="mt-2 inline-flex items-center gap-1.5 text-[#2563EB]"
+            style={{ fontSize: "clamp(11px,2.7vw,11.48px)", fontWeight: 600 }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              className="stroke-current"
+              style={{ width: 14, height: 14 }}
+            >
               <path d="M9 16l-3-3 1.5-1.5L9 13l7.5-7.5L18 7l-9 9z" strokeWidth="2" />
             </svg>
             99.9% Success
@@ -323,16 +467,21 @@ function GraphicCard() {
       </div>
 
       {/* connector line + arrow */}
-      <div className="relative mt-7">
+      {/* Hide on small (it causes crowding); show on md+ with safe positioning */}
+      <div className="relative mt-7 hidden md:block">
         <div className="absolute left-[26%] right-[35%] top-0 h-[3px] rounded-full bg-gradient-to-r from-[#14B8A6] to-[#2563EB]" />
-        <svg className="absolute right-[34%] -top-1.5" width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <svg
+          className="absolute right-[34%] -top-1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          style={{ width: 20, height: 20 }}
+        >
           <path d="M5 12h14M12 5l7 7-7 7" stroke="#2563EB" strokeWidth="2" />
         </svg>
       </div>
     </div>
   );
 }
-
 
 /* append local animations once */
 (() => {
@@ -346,7 +495,6 @@ function GraphicCard() {
   `;
   document.head.appendChild(s);
 })();
-
 
 /* animations (append once) */
 const style = document.createElement("style");

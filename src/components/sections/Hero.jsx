@@ -41,56 +41,83 @@ export default function Hero({ onPrimary, onSecondary }) {
     >
       <BgDecor />
 
-      <div className="relative z-10 w-full max-w-[1240px] mx-auto px-6">
-        <div className="grid grid-cols-12 items-center gap-x-16 lg:gap-x-24">
+      <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-12 items-center gap-x-8 sm:gap-x-16 lg:gap-x-24">
           {/* LEFT */}
-          <div className="col-span-12 lg:col-span-7 mt-2 md:mt-3">
-            <GoalChip className="mb-6 md:mb-7" />
+          <div className="col-span-12 lg:col-span-7 mt-1.5 md:mt-3">
+            <GoalChip className="mb-5 md:mb-7" />
 
             {/* TIGHT HEADING */}
             <h1
-              className="text-white tracking-[-0.015em] md:leading-[0.98]"
-              style={{ fontWeight: 900, lineHeight: 1.02 }} // fallback for <md
+              className="text-white tracking-[-0.015em]"
+              /* slightly taller line-height to prevent overlap on all sizes */
+              style={{ fontWeight: 900, lineHeight: 1.08 }}
             >
-              {/* line 1 — slight negative mb to close gap */}
-              <span className="block text-[34px] sm:text-[44.2px] lg:text-[52.7px] xl:text-[57.8px] -mb-[8px]">
+              {/* line 1 */}
+              <span
+                className="block"
+                style={{
+                  /* 34 → 57.8 with responsive clamp */
+                  fontSize: "clamp(28px, 6.5vw, 57.8px)",
+                  /* give breathing room between rows on tiny screens */
+                  marginBottom: "clamp(1px, 1.2vw, 1px)",
+                }}
+              >
                 <span className="inline-flex items-baseline">
                   <span>Deliver great&nbsp;</span>
                   <AIPill>IT</AIPill>
                 </span>
               </span>
 
-              {/* line 2 — pill + text as one row, tight gap */}
-              <span className="block text-[25.5px] sm:text-[25.5px] lg:text-[52.7px] xl:text-[57.8px] -mb-[4px]">
+              {/* line 2 */}
+              <span
+                className="block"
+                style={{
+                  /* 25.5 → 57.8 */
+                  fontSize: "clamp(22px, 6.2vw, 57.8px)",
+                  marginBottom: "clamp(1px, 1vw, 0.5px)",
+                }}
+              >
                 <span className="inline-flex items-baseline">
                   <SecurityPill>Solutions</SecurityPill>
-                  <span className="ml-[8px] align-[2px] text-[34px] sm:text-[44.2px] lg:text-[52.7px] xl:text-[57.8px]">
+                  <span
+                    className="ml-[8px] align-[2px]"
+                    style={{
+                      /* 34 → 57.8 to match row 1 on larger screens */
+                      fontSize: "clamp(28px, 6.5vw, 57.8px)",
+                    }}
+                  >
                     to African
                   </span>
                 </span>
               </span>
 
               {/* line 3 */}
-              <span className="block text-[34px] sm:text-[44.2px] lg:text-[52.7px] xl:text-[57.8px]">
+              <span
+                className="block"
+                style={{
+                  /* 34 → 57.8 */
+                  fontSize: "clamp(28px, 6.5vw, 57.8px)",
+                }}
+              >
                 enterprises
               </span>
             </h1>
 
             {/* body */}
             <p
-              className="mt-6 text-[#C4CBD4] max-w-[680px]"
-              style={{ fontSize: 13.175, lineHeight: 1.7, fontWeight: 700 }}
+              className="mt-5 sm:mt-6 text-[#C4CBD4] max-w-[680px]"
+              style={{ fontSize: "clamp(14.5px, 2.3vw, 13.175px)", lineHeight: 1.7, fontWeight: 700 }}
             >
               E-Merge Africa Limited is a Kigali-based IT solutions provider and value-added reseller. We partner with global technology leaders to deliver secure, scalable, and future-ready solutions for African organizations.
-
             </p>
 
             {/* CTAs */}
-            <div className="mt-7 flex flex-col sm:flex-row gap-4">
+            <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row gap-3.5 sm:gap-4">
               <button
                 onClick={onPrimary}
-                className="inline-flex items-center justify-center rounded-[12px] px-6 py-[14px] text-[11.9px] font-bold text-[#0B1015] transition"
-                style={{ backgroundColor: GREEN }}
+                className="inline-flex items-center justify-center rounded-[12px] px-5 sm:px-6 py-[12px] sm:py-[14px] text-[#0B1015] transition"
+                style={{ backgroundColor: GREEN, fontSize: "clamp(11px, 2.7vw, 11.9px)", fontWeight: 700 }}
               >
                 Our Services
                 <svg
@@ -108,7 +135,8 @@ export default function Hero({ onPrimary, onSecondary }) {
               <a
                 href="#contact"
                 onClick={onSecondary}
-                className="inline-flex items-center justify-center rounded-[12px] px-6 py-[14px] text-[11.9px] font-bold border border-[#2F3747] text-white/90 hover:bg-white/5 transition"
+                className="inline-flex items-center justify-center rounded-[12px] px-5 sm:px-6 py-[12px] sm:py-[14px] border border-[#2F3747] text-white/90 hover:bg-white/5 transition"
+                style={{ fontSize: "clamp(11px, 2.7vw, 11.9px)", fontWeight: 700 }}
               >
                 Become a partner
               </a>
@@ -116,8 +144,8 @@ export default function Hero({ onPrimary, onSecondary }) {
 
             {/* trust row */}
             <div
-              className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10.625px] text-[#8D98A7]"
-              style={{ fontWeight: 700 }}
+              className="mt-5 sm:mt-6 flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-3 text-[#8D98A7]"
+              style={{ fontWeight: 700, fontSize: "clamp(10px, 2.4vw, 10.625px)" }}
             >
               <Trust icon="shield">SOC 2 Certified</Trust>
               <Trust icon="check">ISO 27001</Trust>
@@ -126,7 +154,7 @@ export default function Hero({ onPrimary, onSecondary }) {
           </div>
 
           {/* RIGHT */}
-          <div className="col-span-12 lg:col-span-5 flex items-center justify-center lg:justify-end">
+          <div className="col-span-12 lg:col-span-5 flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
             <TiltWrapper max={5} scale={1.015}>
               <div className="lg:translate-x-1 xl:translate-x-3">
                 <ShieldVisual />
@@ -178,13 +206,13 @@ function BgDecor() {
 function GoalChip({ className = "" }) {
   return (
     <div
-      className={`inline-flex items-center gap-2 px-[16px] py-[9px] rounded-lg border ${className}`}
+      className={`inline-flex items-center gap-2 px-[14px] sm:px-[16px] py-[7px] sm:py-[9px] rounded-lg border ${className}`}
       style={{
         background: "rgba(0,179,134,0.12)",
         borderColor: GREEN,
         color: GREEN,
         fontWeight: 700,
-        fontSize: "0.748rem",
+        fontSize: "clamp(11px, 2.7vw, 12px)",
         fontFamily: "Manrope, sans-serif",
       }}
     >
@@ -197,11 +225,11 @@ function GoalChip({ className = "" }) {
   );
 }
 
-/* pills — trimmed vertical padding for tighter heading */
+/* pills — trimmed vertical padding for tighter heading (smaller on tiny screens) */
 function AIPill({ children }) {
   return (
     <span
-      className="inline-block rounded-md px-[16px] py-[8px] align-middle"
+      className="inline-block rounded-md px-[12px] sm:px-[16px] py-[6px] sm:py-[8px] align-middle"
       style={{
         backgroundColor: GREEN,
         color: "#0B1015",
@@ -217,7 +245,7 @@ function AIPill({ children }) {
 function SecurityPill({ children }) {
   return (
     <span
-      className="inline-block rounded-md px-[16px] py-[8px] align-middle"
+      className="inline-block rounded-md px-[12px] sm:px-[16px] py-[6px] sm:py-[8px] align-middle"
       style={{
         backgroundColor: GREEN,
         color: "#0B1015",
@@ -253,10 +281,10 @@ function Trust({ icon = "shield", children }) {
   );
 }
 
-/* shield visual & keyframes are unchanged from your last working version */
+/* shield visual & keyframes unchanged */
 function ShieldVisual() {
   return (
-    <div className="relative w-[360px] h-[360px] md:w-[420px] md:h-[420px] xl:w-[480px] xl:h-[480px]">
+    <div className="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] md:w-[420px] md:h-[420px] xl:w-[480px] xl:h-[480px]">
       <div
         className="absolute inset-[-6%] rounded-full blur-[14px]"
         style={{
