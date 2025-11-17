@@ -83,7 +83,7 @@ export default function Footer() {
     },
     {
       label: "Email",
-      href: "mailto:hello@emerge.africa",
+      href: "mailto:info@e-mergeafrica.com",
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 4h16v16H4z" />
@@ -214,7 +214,7 @@ export default function Footer() {
                   <path d="M21 8V7l-3 2-4-3-4 3-4-3-3 2v1l3-2 4 3 4-3 4 3 3-2z" />
                 </svg>
                 <a href="mailto:hello@emerge.africa" className="hover:text-white">
-                  hello@emerge.africa
+                  info@e-mergeafrica.com
                 </a>
               </li>
               <li className="flex items-center gap-3">

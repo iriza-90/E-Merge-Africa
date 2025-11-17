@@ -182,7 +182,7 @@ function ResiliencePanel() {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M12 2l7 3v6c0 5-3.5 9.5-7 11-3.5-1.5-7-6-7-11V5l7-3z" />
           </svg>
-           People &amp; Process Resilience
+           Governance, Risk &amp; Awareness
         </div>
 
         <h3 className="mt-4 font-bold text-gray-900 text-[20.4px] md:text-[25.5px]">
@@ -376,7 +376,7 @@ export default function Services() {
             Our Zero Trust-Based Offerings
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-[15.3px]">
-            At E-Merge Africa Limited, our solutions are built on the Zero Trust Architecture (ZTA) principles — never trust, always verify, and enforce least privilege across users, devices, networks, and applications.
+            Our offerings are designed around the Zero Trust Security Framework, ensuring continuous verification, least-privilege access, and complete visibility across digital ecosystems.
           </p>
         </motion.div>
 

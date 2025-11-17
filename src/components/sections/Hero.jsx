@@ -109,9 +109,8 @@ export default function Hero({ onPrimary, onSecondary }) {
               className="mt-5 sm:mt-6 text-[#C4CBD4] max-w-[680px]"
               style={{ fontSize: "clamp(14.5px, 2.3vw, 13.175px)", lineHeight: 1.7, fontWeight: 700 }}
             >
-              E-Merge Africa Limited is a Kigali-based IT solutions provider and value-added reseller. We partner with global technology leaders to deliver secure, scalable, and future-ready solutions for African organizations.
+              We deliver intelligent, secure, and scalable cybersecurity solutions tailored for Africa’s digital future — powered by innovation, expertise, and trusted global alliances.
             </p>
-
             {/* CTAs */}
             <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row gap-3.5 sm:gap-4">
               <button
@@ -220,12 +219,11 @@ function GoalChip({ className = "" }) {
         className="inline-block w-2 h-2 rounded-full"
         style={{ backgroundColor: GREEN }}
       />
-      Your Trusted Partner in Cybersecurity & IT Solutions
+      Your Trusted Partner for Cybersecurity and Digital Transformation in Africa
     </div>
   );
 }
 
-/* pills — trimmed vertical padding for tighter heading (smaller on tiny screens) */
 function AIPill({ children }) {
   return (
     <span

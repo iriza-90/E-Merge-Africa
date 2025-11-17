@@ -128,11 +128,11 @@ export default function Contact() {
   ];
 
   const reasons = [
-    "Built on Zero Trust Architecture for secure, scalable IT environments",
-    "Authorized Darktrace partner delivering AI-driven cyber defense across Africa",
-    "Comprehensive security portfolio from identity to cloud and data protection",
-    "24/7 monitoring and rapid response through intelligent automation",
-    "Deep local expertise with global technology partnerships",
+    " Built on Zero Trust Architecture principles",
+    "Authorized partner of Darktrace Cyber AI",
+    "Africa-based with global technology reach",
+    " Experienced and certified cybersecurity professionals",
+    "Transparent, customer-focused delivery model",
   ];
 
   return (
@@ -164,7 +164,12 @@ export default function Contact() {
         {/* Header */}
         <motion.div variants={fadeInUp} className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-50 text-[#00B3FF] rounded-full border border-blue-200 mb-8">
-            <svg width="16" height="16" viewBox="0 0 24 24" className="fill-none stroke-current">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              className="fill-none stroke-current"
+            >
               <path d="M4 4h16v16H4z" strokeWidth="1.5" />
             </svg>
             <span className="font-medium text-[11.9px]">Get In Touch</span>
@@ -177,20 +182,29 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           {/* left column */}
           <motion.div variants={fadeInLeft} className="space-y-8">
             {/* demo card */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-6 text-[20.4px]">Start Your Zero Trust Journey Today</h3>
+              <h3 className="font-bold text-gray-900 mb-6 text-[20.4px]">
+                Start Your Zero Trust Journey Today
+              </h3>
               <p className="text-gray-600 mb-8 leading-relaxed text-[13.2px]">
-               Discover how AI-driven Zero Trust security protects your business. Book a demo with E-Merge Africa’s experts.
+                Discover how AI-driven Zero Trust security protects your business.
+                Book a demo with E-Merge Africa’s experts.
               </p>
               <a
                 href="mailto:info@emerge-africa.com?subject=Schedule%20AI%20Demo"
                 className="bg-[#00B3FF] hover:bg-[#0099E6] text-white px-8 py-3 rounded-lg font-semibold text-[15.3px] transition-all duration-200 inline-flex items-center gap-3 group"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" className="text-white" fill="currentColor">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  className="text-white"
+                  fill="currentColor"
+                >
                   <polygon points="5 3 19 12 5 21 5 3" />
                 </svg>
                 Book Demo
@@ -210,12 +224,18 @@ export default function Contact() {
               {contactInfo.map((item) => {
                 const Content = (
                   <>
-                    <div className={`w-12 h-12 rounded-lg ${item.color} flex items-center justify-center ring-1 ring-black/5`}>
+                    <div
+                      className={`w-12 h-12 rounded-lg ${item.color} flex items-center justify-center ring-1 ring-black/5`}
+                    >
                       <ContactIcon name={item.icon} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-1 text-[15.3px]">{item.title}</h4>
-                      <p className="text-gray-600 text-[13.2px]">{item.content}</p>
+                      <h4 className="font-bold text-gray-900 mb-1 text-[15.3px]">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 text-[13.2px]">
+                        {item.content}
+                      </p>
                     </div>
                   </>
                 );
@@ -230,7 +250,11 @@ export default function Contact() {
                       <a
                         href={item.href}
                         target={item.icon === "location" ? "_blank" : undefined}
-                        rel={item.icon === "location" ? "noopener noreferrer" : undefined}
+                        rel={
+                          item.icon === "location"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className="flex items-center gap-4"
                         aria-label={item.title}
                       >
@@ -245,21 +269,60 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* right column */}
-          <motion.div variants={fadeInRight} className="bg-gray-50 rounded-lg p-8 border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-gray-900 mb-8 text-[20.4px]">Why Choose E-Merge Africa?</h3>
-            <ul className="space-y-6">
+          {/* right column – tighter and prettier */}
+          <motion.div
+            variants={fadeInRight}
+            className="bg-gray-50 rounded-2xl p-7 border border-gray-200 shadow-sm flex flex-col gap-6"
+          >
+            {/* badge + heading */}
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00B3FF]" />
+                <span className="text-[11px] font-semibold tracking-[0.16em] text-[#005F99] uppercase">
+                  Why choose us
+                </span>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-[20.4px] mb-1">
+                  Why Choose E-Merge Africa?
+                </h3>
+                <p className="text-gray-600 text-[13.2px] leading-relaxed">
+                  A cybersecurity partner rooted in Africa, combining Zero Trust
+                  principles with proven global technology vendors.
+                </p>
+              </div>
+            </div>
+
+            {/* reasons list */}
+            <ul className="space-y-4">
               {reasons.map((reason, index) => (
-                <motion.li key={index} variants={fadeInUp} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-blue-100 grid place-items-center flex-shrink-0 mt-1">
-                    <svg width="12" height="12" viewBox="0 0 24 24" className="fill-[#00B3FF]">
+                <motion.li
+                  key={index}
+                  variants={fadeInUp}
+                  className="flex items-start gap-3 rounded-xl bg-white border border-gray-200 px-3.5 py-3"
+                >
+                  <div className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 flex-shrink-0">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      className="fill-[#00B3FF]"
+                    >
                       <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z" />
                     </svg>
                   </div>
-                  <span className="text-gray-600 leading-relaxed text-[13.2px]">{reason}</span>
+                  <span className="text-gray-700 text-[13px] leading-relaxed">
+                    {reason}
+                  </span>
                 </motion.li>
               ))}
             </ul>
+
+            {/* tiny footer */}
+            <div className="pt-2 border-t border-gray-200 text-[11.5px] text-gray-500 flex items-center gap-2">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00D4AA]" />
+              <span>Focused on long-term resilience, not just quick fixes.</span>
+            </div>
           </motion.div>
         </div>
       </motion.div>

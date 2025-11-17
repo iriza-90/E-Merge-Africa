@@ -126,7 +126,7 @@ export default function Partnership() {
               strokeWidth="1.6"
             />
           </svg>
-          <span>Strategic Partnership</span>
+          <span>Strategic Alliances & Technology Partners</span>
         </motion.div>
 
         {/* heading + subtext */}
@@ -142,9 +142,7 @@ export default function Partnership() {
           className="mb-12 max-w-2xl mx-auto text-[#B0B0B0]"
           style={{ fontSize: "15.3px", lineHeight: 1.7, fontWeight: 500 }}
         >
-          We are an authorized partner of Darktrace, the global leader in AI
-          cybersecurity, bringing world-class autonomous security to African
-          enterprises.
+          We collaborate with global innovators to bring the best cybersecurity technologies to Africa. Our authorized partnership with Darktrace reinforces our commitment to AI-driven threat detection and autonomous response. As we continue to grow, E-Merge Africa is expanding its partner ecosystem to include leaders in networking, cloud, and identity security — ensuring our clients always access the right technologies from trusted global vendors.
         </motion.p>
 
         {/* partner card */}

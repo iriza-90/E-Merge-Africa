@@ -112,7 +112,7 @@ export default function About() {
               className="text-[#334155]"
               style={{ fontSize: "clamp(14px,3.2vw,14.9px)", lineHeight: 1.9 }}
             >
-              E-Merge Africa Limited is a Kigali-based IT solutions provider and value-added reseller. We partner with global technology leaders to deliver secure, scalable, and future-ready solutions for African organizations.
+              E-Merge Africa Limited is a Kigali-based company that delivers modern cybersecurity and IT solutions tailored to African organizations. They help businesses stay secure and resilient using Zero Trust principles and global best practices. They also work with top technology vendors, starting with an authorized partnership with Darktrace, and are expanding their network of global tech partners.
             </p>
 
             <div style={{ marginTop: "clamp(18px,4.2vw,24px)" }} className="space-y-4 sm:space-y-6">
@@ -129,7 +129,7 @@ export default function About() {
                   </svg>
                 }
                 title="Mission"
-                text="To empower African organizations with innovative and secure technology.."
+                text="To empower African organizations with world-class cybersecurity solutions that protect, enable, and inspire digital growth."
               />
 
               <InfoCard
@@ -145,7 +145,7 @@ export default function About() {
                   </svg>
                 }
                 title="Vision"
-                text="To be Africa’s most trusted technology integrator and reseller."
+                text=" To become Africa’s most trusted cybersecurity and technology partner."
               />
             </div>
           </div>

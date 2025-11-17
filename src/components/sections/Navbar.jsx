@@ -94,7 +94,7 @@ export default function Navbar({ onNav }) {
                 fontSize: "clamp(11px, 3.2vw, 12.75px)",
                 fontWeight: 800,
                 lineHeight: 1.1,
-                maxWidth: "min(54vw, 420px)", // prevents pushing burger off-screen
+                maxWidth: "min(54vw, 420px)", 
               }}
               title="E-Merge Africa Limited"
             >
@@ -103,14 +103,14 @@ export default function Navbar({ onNav }) {
             <div
               className="text-[#9CA3AF] hidden sm:block truncate"
               style={{
-                fontSize: "clamp(9px, 2.6vw, 10.2px)",
+                fontSize: "clamp(10.5px, 2.6vw, 10.2px)",
                 lineHeight: 1.1,
                 marginTop: "0.12em",
                 maxWidth: "min(60vw, 460px)",
               }}
               title="Zero Trust Cybersecurity & IT Solutions"
             >
-              Zero Trust Cybersecurity & IT Solutions
+              Empowering Africa’s Digital Future through Cybersecurity and Innovation
             </div>
           </div>
         </div>
